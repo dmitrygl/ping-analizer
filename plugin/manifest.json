@@ -1,0 +1,18 @@
+{
+        "manifest_version": 2,
+
+        "name": "Dmitry Gurko",
+        "version": "0.1",
+        "description": "Show statistic availables hosts for script the pinganalizer.",
+
+        "permissions": [
+                "http://pinganalizer/scripts/ping_analizer.py"
+        ],
+
+        "browser_action": {
+                "default_title": "Pinganalizer plugin",
+                "default_icon": "images/icon.png",
+                "default_popup": "popup.html"
+        }
+}
+

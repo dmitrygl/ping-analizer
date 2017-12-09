@@ -10,21 +10,23 @@ ipaddr = form.getvalue('ipaddr')
 mac = form.getvalue('mac')
 sep = '='
 lineW = name+sep+ipaddr+sep+mac+sep
+link = '<a href="http://pinganalizer/index.html">back</a>'
 
 if name is None or ipaddr is None or mac is None:
-        message = 'You must add data in all field'
+	message = 'You must add data in all field'
 else:
-        # open file for add one line
-        f = open('../file', 'a')
-        print(lineW, file=f)
-
-        f.close()
-        message = 'Data was written'
+	# open file for add one line
+	f = open('../file', 'a')
+	print(lineW, file=f)
+	
+	f.close()
+	message = '"' + name + ',' + ipaddr + ','+mac+ '" was written to file'
 
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML><html><head><meta charset="utf-8"><title>Add line</title></head><body>""")
 
 print("<h1>{}</h1>" .format(message))
+print("{}" .format(link))
 
 print("</body></html>")
 

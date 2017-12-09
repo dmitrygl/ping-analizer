@@ -1,0 +1,26 @@
+#blockR {
+        width: 150px;
+        text-align: center;
+        font-size: 45px;
+        background: red;
+        border-radius: 70px;
+}
+#blockG {
+        width: 150px;
+        text-align: center;
+        font-size: 45px;
+        background: green;
+        border-radius: 70px;
+}
+#blockO {
+        width: 150px;
+        text-align: center;
+        font-size: 45px;
+        background: orange;
+        border-radius: 70px;
+}
+#image {
+        width: 150px;
+        background: yellow;
+}
+

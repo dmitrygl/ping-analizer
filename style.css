@@ -1,0 +1,91 @@
+body {
+	background-image: url(fon.png);
+}
+article {
+	width: auto;
+	height: auto;
+	font-family: 'Righteous', cursive;
+}
+a {
+	text-decoration: none;
+}
+#start {
+	font-family: 'Permanent Marker', cursive;
+	width: 400px;
+	background: #2055aa;
+	border-radius: 50px;
+	margin: auto;
+	padding: 10px;
+	margin-top: 50px;
+	margin-bottom: 70px;
+	text-align: center;
+
+}
+#start a {
+	color: #53aa20;
+	font-size: 50px;
+}
+#start a:hover {
+	color: #a91f7e;
+	font-size: 50px;
+}
+#line {
+	width: 400px;
+	margin: auto;
+	border: 5px dashed;
+	border-radius: 50px;
+	padding: 30px;
+}
+#line p {
+	text-align: center;
+}
+#line form {
+	text-align: center;
+}
+#upload {
+	width: 400px;
+	margin: auto;
+	margin-top: 30px;
+	border: 5px dashed;
+	padding: 35px;
+	border-radius: 50px;
+}
+#upload p {
+	text-align: center;
+}
+#upload form {
+	text-align: center;
+}
+#view {
+	width: 400px;
+	margin: auto;
+	margin-top: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+#view a {
+	background: #0cebed;
+	border-radius: 50px;
+	width: 400px;
+	padding: 15px;
+}
+#view a:hover {
+	color: #f5ff0a;
+}
+#download {
+	width: 400px;
+	margin: auto;
+	margin-top: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+#download a {
+	background: #0cebed;
+	border-radius: 50px;
+	width: 400px;
+	padding: 15px;
+}
+#download a:hover {
+	color: #f5ff0a;
+}
+
