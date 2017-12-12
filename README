@@ -25,6 +25,11 @@ Eсли ваш сервер работает во внешней сети, то 
         		</Directory>
        			 AddHandler cgi-script .cgi .py
 
+Для фиксирования инф. о доступности хостов нужно зоздать задачу в cron, которая будет запускать сценарий init_db.py, отвещающий за инициализацию БД, а также за добавление в эту БД данных. init_db.py должен находится вместе с остальными скриптами!
+Перед созданием задачи в cron необходимо создать пользователя и саму БД в MySQL:
+	- create user 'puser'@'localhost' identified by 'pass1!1SSAP'; (если требуется изменить пароль, тогда нужно поправить строки cnx = mysql.connector.connect(user='puser', password='pass1!1SSAP', host='localhost', database='pinganalizdb') в скритпах init_db.py и request.py)
+	- create database pinganalizdb;
+	- grant all on pinganalizdb.*to 'puser'@'localhost';
 
 Расширение для браузера расчитано на наличие доменного имени "pinganalizer" в Вашей сети, в противном случае нжуно отредактировать popup.js и указать ip_адрес_веб-сервер/pinganalizer/scripts/ping_analizer.py
 Plugin проверен на Chromium и Google Chrome.

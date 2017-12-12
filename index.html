@@ -10,17 +10,17 @@
 <article>
 
 <div id="start">
-	<p><a href="scripts/ping_analizer.py">Start script</a><p>
+	<p><a href="scripts/ping_analizer.py" target="_blank">Start script</a><p>
 </div>
 
 <div id="line">
 	<p>Add in file one line with info about<br> hostname, mac and ip addresses</p>
 
 	<form action="scripts/add_line.py" method="get">
-		<input type="text" name="name" placeholder="write hostname"><br><br>
-		<input type="text" name="ipaddr" placeholder="write '192.168.X.X'"><br><br>
-		<input type="text" name="mac" placeholder="write 'xx:xx:xx:xx:xx:xx'"><br><br>
-		<input type="submit" value="Upload">
+		<p><input type="text" name="name" placeholder="write hostname"></p>
+		<p><input type="text" name="ipaddr" placeholder="write '192.168.X.X'"></p>
+		<p><input type="text" name="mac" placeholder="write 'xx:xx:xx:xx:xx:xx'"></p>
+		<p><input type="submit" value="Upload"></p>
 	</form>
 </div>
 
@@ -39,6 +39,64 @@
 </div>
 <div id="download">
 	<a href="file" download>Download current file for ip-search</a>
+</div>
+
+<div id="upload">
+	<p>Make request to data base, and recive report about available hosts on chosed time</p>
+
+	<form action="scripts/request_db.py" method="get">
+		<input type="radio" name="request" value="1">Short report<br<br>
+		<input type="radio" name="request" value="2">Long report<br><br>
+		<p><select name="day">
+		<option selected disabled>Chose day of month</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="2w">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+		</select></p>
+		<p><select name="month">
+		<option selected disabled>Chose month of year</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">11</option>
+		<option value="12">12</option>
+		</select></p>
+		<p><input type="submit" value="Report"></p>
+
+	</form>
 </div>
 
 </article>
