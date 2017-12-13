@@ -4,7 +4,7 @@ import datetime
 import subprocess
 
 # connectiong to database;
-cnx = mysql.connector.connect(user='puser', password='pU2ZerP', host='localhost', database='pinganalizdb')
+cnx = mysql.connector.connect(user='puser', password='pass1!1SSAP', host='localhost', database='pinganalizdb')
 cursor = cnx.cursor(buffered = True)
 
 # checkign tables in DB. If DB empty, then will make tables, if tables exist - will add data. 

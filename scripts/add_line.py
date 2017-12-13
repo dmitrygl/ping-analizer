@@ -9,24 +9,26 @@ name = form.getvalue('name')
 ipaddr = form.getvalue('ipaddr')
 mac = form.getvalue('mac')
 sep = '='
-lineW = name+sep+ipaddr+sep+mac+sep
-link = '<a href="http://pinganalizer/index.html">back</a>'
+link = '<a href="../index.html">back</a>'
 
 if name is None or ipaddr is None or mac is None:
-	message = 'You must add data in all field'
+	message = '<h1 align="center" style="color:red">You must add data in all field</h1>'
 else:
+	# make link to back on mainpage
+	lineW = name+sep+ipaddr+sep+mac+sep
 	# open file for add one line
 	f = open('../file', 'a')
 	print(lineW, file=f)
 	
 	f.close()
-	message = '"' + name + ',' + ipaddr + ','+mac+ '" was written to file'
+	message = '<h1>"' + name + ',' + ipaddr + ','+mac+ '" was written to file</h1>'
 
+# print in browser
 print("Content-type: text/html\n")
-print("""<!DOCTYPE HTML><html><head><meta charset="utf-8"><title>Add line</title></head><body>""")
+print("""<!DOCTYPE HTML><html><head><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../style.css"><title>Add line</title></head><body>""")
 
-print("<h1>{}</h1>" .format(message))
-print("{}" .format(link))
+print('{}' .format(message))
+print("<br>{}" .format(link))
 
 print("</body></html>")
 

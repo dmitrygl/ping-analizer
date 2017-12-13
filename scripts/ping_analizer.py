@@ -14,7 +14,7 @@ macError = 'Can\'t find mac-address'
 
 
 print("Content-type: text/html\n")
-print('<!DOCTYPE html><html><head><meta charset="utf-8"><title>Available phones</title></head><body align="center">')
+print('<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../style.css"><title>Available phones</title></head><body align="center">')
 
 f = open('../file', 'r')
 for line in f:

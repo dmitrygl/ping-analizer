@@ -11,17 +11,18 @@ request = form.getvalue("request")
 day = form.getvalue("day")
 month = form.getvalue("month")
 
-link = '<a href="http://pinganalizer/index.html">back</a>'
-
-# connection with DB
-cnx = mysql.connector.connect(user='puser', password='pU2ZerP', host='localhost', database='pinganalizdb')
-cursor = cnx.cursor()
+link = '<a href="../index.html">back</a>'
 
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML><html><head><meta charset="utf-8"><title>DB report</title></head><body>""")
 
 if request is None or day is None or month is None:
 	print("""<h1 align=center style="color:red">"You must choose day and month, and what kind report you want receive - short or long'</h1>""")
+	print("{}" .format(link))
+
+# connection with DB
+cnx = mysql.connector.connect(user='puser', password='pass1!1SSAP', host='localhost', database='pinganalizdb')
+cursor = cnx.cursor()
 
 # translate str in int
 request = int(request)
@@ -53,7 +54,6 @@ if request == 1:
 	print("""<h1 align=center style="color:red">{} hosts wos unavailable</h1>""".format(badQuery[0]))
 	print("""<h1 align=center style="color:orange">{} hosts wos need attention</h1>""".format(attentionQuery[0]))
 
-	print("{}" .format(link))
 	
 # if query to DB is long statistic
 else:
@@ -68,8 +68,7 @@ else:
 	for y in query:
 		print("<p align=center> {}  </p>".format(y))
 
-	print("{}" .format(link))
-
+print("{}" .format(link))
 cursor.close()
 cnx.close()
 
